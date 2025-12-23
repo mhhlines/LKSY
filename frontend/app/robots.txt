@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lksy.org/sitemap.xml
+

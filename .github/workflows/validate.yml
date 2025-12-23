@@ -1,0 +1,39 @@
+name: Validate PR
+
+on:
+  pull_request:
+    paths:
+      - 'community-standards/lists/**'
+      - 'community-standards/schema.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: |
+          npm install -g ajv-cli
+      
+      - name: Validate JSON Schema
+        run: |
+          for file in community-standards/lists/*.json; do
+            if [ -f "$file" ]; then
+              echo "Validating $file..."
+              ajv validate -s community-standards/schema.json -d "$file" || exit 1
+            fi
+          done
+      
+      - name: Check for Breaking Changes
+        run: |
+          # Check if any items were removed (breaking change)
+          echo "Checking for breaking changes..."
+          # This would require comparing with main branch
+          # For now, we'll just validate schema
+

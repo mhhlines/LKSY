@@ -1,0 +1,50 @@
+name: Auto Version & Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'community-standards/lists/**'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Detect Changed Lists
+        id: changes
+        run: |
+          # Get list of changed JSON files
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD | grep 'community-standards/lists/.*\.json$' || true)
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Bump Version and Create Tags
+        run: |
+          # This would need a script to:
+          # 1. Detect changes (added items = minor, removed = major, modified = patch)
+          # 2. Update version in JSON file
+          # 3. Create git tag: {list-id}-v{version}
+          # For now, this is a placeholder
+          echo "Version bumping logic would go here"
+      
+      - name: Update CHANGELOG
+        run: |
+          # Extract PR info and add to CHANGELOG.md
+          echo "CHANGELOG update logic would go here"
+      
+      - name: Trigger Deployments
+        run: |
+          # Trigger Cloud Build deployments
+          echo "Deployment trigger logic would go here"
+

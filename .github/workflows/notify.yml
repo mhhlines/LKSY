@@ -1,0 +1,25 @@
+name: Notify Subscribers
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Get Release Info
+        id: release
+        run: |
+          # Extract list ID and version from tag
+          TAG_NAME="${{ github.event.release.tag_name }}"
+          echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
+      
+      - name: Send Webhooks
+        run: |
+          # Query subscribers from database
+          # POST to each webhook URL
+          echo "Webhook notification logic would go here"
+
