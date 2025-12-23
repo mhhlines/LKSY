@@ -5,12 +5,12 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const OWNER = process.env.GITHUB_OWNER || 'lksy-org';
-const REPO = process.env.GITHUB_REPO || 'community-standards';
+const OWNER = process.env.GITHUB_OWNER || 'mhhlines';
+const REPO = process.env.GITHUB_REPO || 'LKSY';
 
 export async function getListFromGitHub(id: string, version?: string): Promise<List | null> {
   try {
-    const path = `lists/${id}.json`;
+    const path = `community-standards/lists/${id}.json`;
     let ref: string | undefined;
     
     if (version && version !== 'latest') {
@@ -41,7 +41,7 @@ export async function getAllListsFromGitHub(): Promise<List[]> {
     const { data } = await octokit.repos.getContent({
       owner: OWNER,
       repo: REPO,
-      path: 'lists',
+      path: 'community-standards/lists',
     });
     
     if (!Array.isArray(data)) {
@@ -104,7 +104,7 @@ export async function createProposalPR(data: {
     
     // Create or update file
     if (data.type === 'new-list') {
-      const filePath = `lists/${data.list_id}.json`;
+      const filePath = `community-standards/lists/${data.list_id}.json`;
       const fileContent = JSON.stringify(data.initial_data, null, 2);
       
       await octokit.repos.createOrUpdateFileContents({

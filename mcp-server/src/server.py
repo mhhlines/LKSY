@@ -14,8 +14,8 @@ from mcp.types import Resource, Tool, TextContent
 
 # Configuration
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
-GITHUB_OWNER = os.getenv('GITHUB_OWNER', 'lksy-org')
-GITHUB_REPO = os.getenv('GITHUB_REPO', 'community-standards')
+GITHUB_OWNER = os.getenv('GITHUB_OWNER', 'mhhlines')
+GITHUB_REPO = os.getenv('GITHUB_REPO', 'LKSY')
 GITHUB_API_BASE = 'https://api.github.com'
 
 # Initialize server
@@ -28,7 +28,7 @@ _lists_cache: dict[str, Any] = {}
 async def fetch_list_from_github(list_id: str, version: str = 'latest') -> dict[str, Any] | None:
     """Fetch a list from GitHub"""
     try:
-        path = f'repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/lists/{list_id}.json'
+        path = f'repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/community-standards/lists/{list_id}.json'
         headers = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
         
         params = {}
@@ -58,7 +58,7 @@ async def fetch_list_from_github(list_id: str, version: str = 'latest') -> dict[
 async def fetch_all_lists() -> list[dict[str, Any]]:
     """Fetch all lists from GitHub"""
     try:
-        path = f'repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/lists'
+        path = f'repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/community-standards/lists'
         headers = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
         
         async with httpx.AsyncClient() as client:

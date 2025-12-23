@@ -5,15 +5,15 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const OWNER = process.env.GITHUB_OWNER || 'lksy-org';
-const REPO = process.env.GITHUB_REPO || 'community-standards';
+const OWNER = process.env.GITHUB_OWNER || 'mhhlines';
+const REPO = process.env.GITHUB_REPO || 'LKSY';
 
 export async function getLists(): Promise<List[]> {
   try {
     const { data } = await octokit.repos.getContent({
       owner: OWNER,
       repo: REPO,
-      path: 'lists',
+      path: 'community-standards/lists',
     });
 
     if (!Array.isArray(data)) {
@@ -50,7 +50,7 @@ export async function getLists(): Promise<List[]> {
 
 export async function getList(id: string, version?: string): Promise<List | null> {
   try {
-    const path = `lists/${id}.json`;
+    const path = `community-standards/lists/${id}.json`;
     
     // If version is specified, try to get from that tag
     let ref: string | undefined;
