@@ -1,0 +1,218 @@
+{
+  "id": "email-spam-triggers",
+  "version": "1.0.0",
+  "name": "Email Spam Triggers",
+  "description": "Words and patterns that trigger email spam filters",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["email", "deliverability", "spam", "content"],
+  "first_published": "2025-01-21",
+  "last_updated": "2025-01-21",
+  "seo": {
+    "title": "Email Spam Triggers Checklist v1.0.0 | lksy.org",
+    "description": "Community-maintained list of 18 words and patterns that trigger email spam filters. Free, open source, version-controlled.",
+    "keywords": ["email spam triggers", "spam filter words", "email deliverability", "avoid spam folder"]
+  },
+  "checks": [
+    {
+      "id": "excessive-caps",
+      "name": "Excessive Caps Lock",
+      "severity": "critical",
+      "description": "Detect when more than 50% of email content is in uppercase",
+      "rationale": "Excessive capitalization is a strong spam signal and looks unprofessional",
+      "automatable": true,
+      "detection_method": "text_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "spam-trigger-words",
+      "name": "Spam Trigger Words",
+      "severity": "critical",
+      "description": "Detect common spam trigger words like 'FREE', 'ACT NOW', 'CLICK HERE', 'URGENT'",
+      "rationale": "These words are heavily weighted by spam filters",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "excessive-exclamation",
+      "name": "Excessive Exclamation Marks",
+      "severity": "major",
+      "description": "Detect more than 2 exclamation marks in subject line or excessive use in body",
+      "rationale": "Multiple exclamation marks are a spam indicator",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "suspicious-urls",
+      "name": "Suspicious URLs",
+      "severity": "critical",
+      "description": "Detect URL shorteners, suspicious domains, or mismatched link text",
+      "rationale": "Suspicious links are a major red flag for spam filters",
+      "automatable": true,
+      "detection_method": "url_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "unreplaced-tokens",
+      "name": "Unreplaced Personalization Tokens",
+      "severity": "major",
+      "description": "Detect [FIRSTNAME], {{firstName}}, or similar tokens that weren't replaced",
+      "rationale": "Unreplaced tokens look unprofessional and trigger spam filters",
+      "automatable": true,
+      "detection_method": "regex",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "excessive-emoji",
+      "name": "Excessive Emoji Usage",
+      "severity": "minor",
+      "description": "Detect more than 3 emojis in subject line or excessive use in body",
+      "rationale": "Too many emojis can trigger spam filters",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "cryptocurrency-keywords",
+      "name": "Cryptocurrency Keywords",
+      "severity": "major",
+      "description": "Detect cryptocurrency-related keywords that often trigger spam filters",
+      "rationale": "Crypto content is frequently flagged as spam",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "money-symbols",
+      "name": "Money Symbols",
+      "severity": "major",
+      "description": "Detect excessive use of money symbols ($, €, £) or 'get rich' language",
+      "rationale": "Financial spam indicators",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "all-caps-subject",
+      "name": "All Caps Subject Line",
+      "severity": "critical",
+      "description": "Detect subject lines written entirely in uppercase",
+      "rationale": "All caps subject lines are almost always marked as spam",
+      "automatable": true,
+      "detection_method": "text_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "suspicious-attachments",
+      "name": "Suspicious Attachments",
+      "severity": "critical",
+      "description": "Detect executable files, zip files, or suspicious attachment types",
+      "rationale": "Suspicious attachments are major spam indicators",
+      "automatable": true,
+      "detection_method": "file_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "excessive-hyperlinks",
+      "name": "Excessive Hyperlinks",
+      "severity": "major",
+      "description": "Detect more than 5 links in email body",
+      "rationale": "Too many links can trigger spam filters",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "image-only-email",
+      "name": "Image-Only Email",
+      "severity": "major",
+      "description": "Detect emails with only images and no text content",
+      "rationale": "Image-only emails are often spam",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "suspicious-sender",
+      "name": "Suspicious Sender Address",
+      "severity": "critical",
+      "description": "Detect suspicious sender email addresses (noreply, no-reply, suspicious domains)",
+      "rationale": "Suspicious sender addresses are spam indicators",
+      "automatable": true,
+      "detection_method": "email_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "phishing-keywords",
+      "name": "Phishing Keywords",
+      "severity": "critical",
+      "description": "Detect common phishing keywords like 'verify account', 'suspended', 'action required'",
+      "rationale": "Phishing keywords trigger spam filters",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "excessive-punctuation",
+      "name": "Excessive Punctuation",
+      "severity": "minor",
+      "description": "Detect excessive use of punctuation marks (???, !!!, ...)",
+      "rationale": "Excessive punctuation is a spam indicator",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "red-flag-words",
+      "name": "Red Flag Words",
+      "severity": "major",
+      "description": "Detect words like 'guarantee', 'no risk', 'limited time', 'act now'",
+      "rationale": "Sales pressure words trigger spam filters",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "suspicious-html",
+      "name": "Suspicious HTML Structure",
+      "severity": "major",
+      "description": "Detect suspicious HTML patterns, hidden text, or obfuscated content",
+      "rationale": "Suspicious HTML is often used by spammers",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "low-text-to-image-ratio",
+      "name": "Low Text to Image Ratio",
+      "severity": "major",
+      "description": "Detect emails with very little text compared to images",
+      "rationale": "Low text-to-image ratio is a spam indicator",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    }
+  ]
+}
+

@@ -1,0 +1,185 @@
+{
+  "id": "email-accessibility",
+  "version": "1.0.0",
+  "name": "Email Accessibility",
+  "description": "Accessibility checks to ensure emails are accessible to all users",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["email", "accessibility", "wcag"],
+  "first_published": "2025-01-21",
+  "last_updated": "2025-01-21",
+  "seo": {
+    "title": "Email Accessibility Checklist v1.0.0 | lksy.org",
+    "description": "15 accessibility checks for email to ensure WCAG compliance and accessibility for all users.",
+    "keywords": ["email accessibility", "wcag", "accessible email", "email a11y"]
+  },
+  "checks": [
+    {
+      "id": "alt-text-images",
+      "name": "Alt Text for Images",
+      "severity": "critical",
+      "description": "All images must have descriptive alt text",
+      "rationale": "Screen readers rely on alt text to describe images",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "color-contrast",
+      "name": "Color Contrast Ratio",
+      "severity": "critical",
+      "description": "Text must meet WCAG AA contrast ratio (4.5:1 for normal text, 3:1 for large text)",
+      "rationale": "Low contrast makes text unreadable for many users",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "color-alone",
+      "name": "Color Not Used Alone",
+      "severity": "critical",
+      "description": "Information must not be conveyed by color alone",
+      "rationale": "Colorblind users cannot distinguish color-only information",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "link-text",
+      "name": "Descriptive Link Text",
+      "severity": "major",
+      "description": "Links must have descriptive text (not 'click here' or 'read more')",
+      "rationale": "Screen reader users navigate by links",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "heading-structure",
+      "name": "Proper Heading Structure",
+      "severity": "major",
+      "description": "Use proper heading hierarchy (h1, h2, h3) for structure",
+      "rationale": "Screen readers use headings for navigation",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "table-headers",
+      "name": "Table Headers",
+      "severity": "major",
+      "description": "Tables must have proper header cells (th elements)",
+      "rationale": "Screen readers need headers to understand table structure",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "font-size",
+      "name": "Minimum Font Size",
+      "severity": "major",
+      "description": "Body text must be at least 14px (16px recommended)",
+      "rationale": "Small text is difficult to read for many users",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "line-height",
+      "name": "Line Height",
+      "severity": "minor",
+      "description": "Line height should be at least 1.5 times font size",
+      "rationale": "Adequate line spacing improves readability",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "language-attribute",
+      "name": "Language Attribute",
+      "severity": "major",
+      "description": "HTML lang attribute must be set",
+      "rationale": "Screen readers use language for proper pronunciation",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "skip-links",
+      "name": "Skip Links",
+      "severity": "recommended",
+      "description": "Provide skip links for long emails",
+      "rationale": "Allows keyboard users to skip repetitive content",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "form-labels",
+      "name": "Form Labels",
+      "severity": "critical",
+      "description": "All form inputs must have associated labels",
+      "rationale": "Screen readers need labels to identify form fields",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "button-text",
+      "name": "Button Text",
+      "severity": "major",
+      "description": "Buttons must have descriptive text, not just images",
+      "rationale": "Screen readers need text to understand button purpose",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "keyboard-navigation",
+      "name": "Keyboard Navigation",
+      "severity": "critical",
+      "description": "All interactive elements must be keyboard accessible",
+      "rationale": "Many users navigate with keyboard only",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "focus-indicators",
+      "name": "Focus Indicators",
+      "severity": "major",
+      "description": "Interactive elements must have visible focus indicators",
+      "rationale": "Users need to see which element has focus",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "text-alternative",
+      "name": "Text Alternative",
+      "severity": "critical",
+      "description": "All non-text content must have text alternatives",
+      "rationale": "Screen readers cannot read images, videos, etc.",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    }
+  ]
+}
+

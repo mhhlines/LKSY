@@ -1,0 +1,152 @@
+{
+  "id": "email-brand-compliance",
+  "version": "1.0.0",
+  "name": "Email Brand Compliance",
+  "description": "Checks to ensure emails comply with brand guidelines",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["email", "brand", "design", "compliance"],
+  "first_published": "2025-01-21",
+  "last_updated": "2025-01-21",
+  "seo": {
+    "title": "Email Brand Compliance Checklist v1.0.0 | lksy.org",
+    "description": "12 brand compliance checks for email to ensure consistency with brand guidelines.",
+    "keywords": ["email brand", "brand compliance", "email design", "brand guidelines"]
+  },
+  "checks": [
+    {
+      "id": "logo-usage",
+      "name": "Logo Usage",
+      "severity": "critical",
+      "description": "Verify logo is present and follows brand guidelines",
+      "rationale": "Logo is essential for brand recognition",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "high",
+      "status": "approved"
+    },
+    {
+      "id": "color-palette",
+      "name": "Color Palette",
+      "severity": "critical",
+      "description": "Verify colors match brand color palette",
+      "rationale": "Consistent colors maintain brand identity",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "severity": "major",
+      "description": "Verify fonts match brand typography guidelines",
+      "rationale": "Consistent typography maintains brand identity",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "tone-of-voice",
+      "name": "Tone of Voice",
+      "severity": "major",
+      "description": "Verify copy matches brand tone of voice",
+      "rationale": "Consistent tone maintains brand personality",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "high",
+      "status": "approved"
+    },
+    {
+      "id": "imagery-style",
+      "name": "Imagery Style",
+      "severity": "major",
+      "description": "Verify images match brand style guidelines",
+      "rationale": "Consistent imagery maintains brand identity",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "high",
+      "status": "approved"
+    },
+    {
+      "id": "spacing-consistency",
+      "name": "Spacing Consistency",
+      "severity": "minor",
+      "description": "Verify spacing follows brand guidelines",
+      "rationale": "Consistent spacing improves visual hierarchy",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "button-style",
+      "name": "Button Style",
+      "severity": "major",
+      "description": "Verify buttons match brand button style",
+      "rationale": "Consistent buttons maintain brand identity",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "footer-compliance",
+      "name": "Footer Compliance",
+      "severity": "critical",
+      "description": "Verify footer includes required brand elements",
+      "rationale": "Footer is required for brand compliance",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "social-icons",
+      "name": "Social Media Icons",
+      "severity": "minor",
+      "description": "Verify social media icons match brand guidelines",
+      "rationale": "Consistent icons maintain brand identity",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "high",
+      "status": "approved"
+    },
+    {
+      "id": "tagline-usage",
+      "name": "Tagline Usage",
+      "severity": "recommended",
+      "description": "Verify tagline is present if required by brand guidelines",
+      "rationale": "Tagline reinforces brand messaging",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "legal-text",
+      "name": "Legal Text",
+      "severity": "critical",
+      "description": "Verify required legal text is present (privacy policy, terms)",
+      "rationale": "Legal text is required for compliance",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "brand-colors-only",
+      "name": "Brand Colors Only",
+      "severity": "major",
+      "description": "Verify only approved brand colors are used",
+      "rationale": "Unauthorized colors dilute brand identity",
+      "automatable": true,
+      "detection_method": "css_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    }
+  ]
+}
+

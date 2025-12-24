@@ -1,0 +1,152 @@
+{
+  "id": "cookie-consent-standards",
+  "version": "1.0.0",
+  "name": "Cookie Consent Standards",
+  "description": "Standards for cookie consent implementation and compliance",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["privacy", "cookies", "consent", "web"],
+  "first_published": "2025-01-21",
+  "last_updated": "2025-01-21",
+  "seo": {
+    "title": "Cookie Consent Standards v1.0.0 | lksy.org",
+    "description": "12 cookie consent standards for GDPR and ePrivacy Directive compliance.",
+    "keywords": ["cookie consent", "gdpr cookies", "cookie compliance", "cookie banner"]
+  },
+  "checks": [
+    {
+      "id": "consent-banner",
+      "name": "Consent Banner Present",
+      "severity": "critical",
+      "description": "Verify cookie consent banner is displayed on first visit",
+      "rationale": "Required by ePrivacy Directive and GDPR",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "consent-before-cookies",
+      "name": "Consent Before Cookies",
+      "severity": "critical",
+      "description": "Verify no non-essential cookies are set before consent",
+      "rationale": "Required by GDPR - consent must be obtained first",
+      "automatable": true,
+      "detection_method": "cookie_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "granular-consent",
+      "name": "Granular Consent Options",
+      "severity": "critical",
+      "description": "Verify users can consent to different cookie categories separately",
+      "rationale": "Required by GDPR - consent must be granular",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "cookie-policy-link",
+      "name": "Cookie Policy Link",
+      "severity": "critical",
+      "description": "Verify link to cookie policy is present in banner",
+      "rationale": "Required by ePrivacy Directive",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "accept-reject-buttons",
+      "name": "Accept/Reject Buttons",
+      "severity": "critical",
+      "description": "Verify both Accept and Reject buttons are present",
+      "rationale": "Required by GDPR - users must be able to reject",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "consent-storage",
+      "name": "Consent Storage",
+      "severity": "critical",
+      "description": "Verify consent choice is stored and respected",
+      "rationale": "Consent must be remembered and respected",
+      "automatable": true,
+      "detection_method": "cookie_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "withdraw-consent",
+      "name": "Withdraw Consent",
+      "severity": "critical",
+      "description": "Verify users can withdraw consent easily",
+      "rationale": "Required by GDPR - consent must be withdrawable",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "essential-cookies-only",
+      "name": "Essential Cookies Only",
+      "severity": "critical",
+      "description": "Verify only essential cookies are set without consent",
+      "rationale": "Essential cookies don't require consent",
+      "automatable": true,
+      "detection_method": "cookie_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "third-party-disclosure",
+      "name": "Third-Party Cookie Disclosure",
+      "severity": "critical",
+      "description": "Verify all third-party cookies are disclosed",
+      "rationale": "Required by GDPR - users must know who sets cookies",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "high",
+      "status": "approved"
+    },
+    {
+      "id": "cookie-categories",
+      "name": "Cookie Categories",
+      "severity": "major",
+      "description": "Verify cookies are categorized (essential, analytics, marketing, etc.)",
+      "rationale": "Categorization helps users understand cookie purposes",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "cookie-duration",
+      "name": "Cookie Duration Disclosure",
+      "severity": "major",
+      "description": "Verify cookie duration is disclosed",
+      "rationale": "Users should know how long cookies persist",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "high",
+      "status": "approved"
+    },
+    {
+      "id": "no-dark-patterns",
+      "name": "No Dark Patterns",
+      "severity": "critical",
+      "description": "Verify no dark patterns (pre-checked boxes, misleading text)",
+      "rationale": "Dark patterns violate GDPR consent requirements",
+      "automatable": true,
+      "detection_method": "html_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    }
+  ]
+}
+

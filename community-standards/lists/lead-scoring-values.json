@@ -1,0 +1,179 @@
+{
+  "id": "lead-scoring-values",
+  "version": "1.0.0",
+  "name": "Lead Scoring Values",
+  "description": "Standardized lead scoring values and benchmarks",
+  "type": "values",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["sales", "crm", "lead-qualification", "scoring"],
+  "first_published": "2025-01-21",
+  "last_updated": "2025-01-21",
+  "seo": {
+    "title": "Lead Scoring Values v1.0.0 | lksy.org",
+    "description": "32 standardized lead scoring values and benchmarks for CRM lead qualification.",
+    "keywords": ["lead scoring", "crm", "lead qualification", "sales scoring"]
+  },
+  "values": {
+    "demographic_scores": {
+      "description": "Scores based on company/contact demographics",
+      "values": [
+        {
+          "field": "company_size",
+          "values": {
+            "enterprise_10000+": 20,
+            "large_1000-9999": 15,
+            "medium_100-999": 10,
+            "small_10-99": 5,
+            "startup_1-9": 2
+          }
+        },
+        {
+          "field": "job_title",
+          "values": {
+            "c_suite": 25,
+            "vp_director": 20,
+            "manager": 15,
+            "individual_contributor": 10,
+            "other": 5
+          }
+        },
+        {
+          "field": "industry",
+          "values": {
+            "target_industry_1": 15,
+            "target_industry_2": 15,
+            "related_industry": 10,
+            "other": 5
+          }
+        },
+        {
+          "field": "location",
+          "values": {
+            "target_region": 10,
+            "domestic": 5,
+            "international": 3
+          }
+        }
+      ]
+    },
+    "behavioral_scores": {
+      "description": "Scores based on user behavior",
+      "values": [
+        {
+          "field": "website_visits",
+          "values": {
+            "10+_visits": 20,
+            "5-9_visits": 15,
+            "2-4_visits": 10,
+            "1_visit": 5
+          }
+        },
+        {
+          "field": "page_views",
+          "values": {
+            "pricing_page": 25,
+            "product_page": 20,
+            "blog_post": 10,
+            "homepage": 5
+          }
+        },
+        {
+          "field": "form_submissions",
+          "values": {
+            "demo_request": 30,
+            "contact_form": 20,
+            "newsletter": 10,
+            "download": 15
+          }
+        },
+        {
+          "field": "email_engagement",
+          "values": {
+            "clicked_link": 15,
+            "opened_email": 10,
+            "replied_to_email": 25,
+            "unsubscribed": -20
+          }
+        },
+        {
+          "field": "content_downloads",
+          "values": {
+            "whitepaper": 15,
+            "case_study": 20,
+            "ebook": 10,
+            "webinar_recording": 15
+          }
+        }
+      ]
+    },
+    "engagement_scores": {
+      "description": "Scores based on engagement level",
+      "values": [
+        {
+          "field": "time_on_site",
+          "values": {
+            "10+_minutes": 20,
+            "5-9_minutes": 15,
+            "2-4_minutes": 10,
+            "under_2_minutes": 5
+          }
+        },
+        {
+          "field": "return_visits",
+          "values": {
+            "5+_returns": 25,
+            "3-4_returns": 20,
+            "2_returns": 15,
+            "1_return": 10
+          }
+        },
+        {
+          "field": "social_engagement",
+          "values": {
+            "shared_content": 15,
+            "followed_social": 10,
+            "commented": 20
+          }
+        }
+      ]
+    },
+    "negative_scores": {
+      "description": "Negative scores that reduce lead score",
+      "values": [
+        {
+          "field": "bounce_behavior",
+          "values": {
+            "email_bounce": -10,
+            "hard_bounce": -15,
+            "spam_complaint": -25
+          }
+        },
+        {
+          "field": "inactivity",
+          "values": {
+            "no_activity_90_days": -15,
+            "no_activity_180_days": -25
+          }
+        },
+        {
+          "field": "unsubscribe",
+          "values": {
+            "unsubscribed": -20,
+            "marked_spam": -30
+          }
+        }
+      ]
+    },
+    "thresholds": {
+      "description": "Lead qualification thresholds",
+      "values": {
+        "hot_lead": 80,
+        "warm_lead": 50,
+        "cold_lead": 25,
+        "unqualified": 0
+      }
+    }
+  }
+}
+

@@ -1,0 +1,84 @@
+{
+  "id": "campaign-naming-conventions",
+  "version": "1.0.0",
+  "name": "Campaign Naming Conventions",
+  "description": "Standardized rules for naming marketing campaigns",
+  "type": "values",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["marketing", "operations", "naming", "conventions"],
+  "first_published": "2025-01-21",
+  "last_updated": "2025-01-21",
+  "seo": {
+    "title": "Campaign Naming Conventions v1.0.0 | lksy.org",
+    "description": "8 standardized rules for naming marketing campaigns consistently across channels.",
+    "keywords": ["campaign naming", "marketing operations", "campaign conventions"]
+  },
+  "values": {
+    "rules": [
+      {
+        "rule": "Use lowercase with hyphens",
+        "description": "Format: campaign-name-2025-01",
+        "example": "product-launch-2025-01",
+        "rationale": "Consistent formatting improves tracking and reporting"
+      },
+      {
+        "rule": "Include date for time-bound campaigns",
+        "description": "Add year-month for campaigns with end dates",
+        "example": "summer-sale-2025-06",
+        "rationale": "Dates help distinguish similar campaigns over time"
+      },
+      {
+        "rule": "Be descriptive but concise",
+        "description": "Use clear, specific names (max 50 characters)",
+        "example": "webinar-lead-gen-q1",
+        "rationale": "Descriptive names improve campaign identification"
+      },
+      {
+        "rule": "Avoid special characters",
+        "description": "No spaces, underscores, or special chars",
+        "example": "campaign-name-2025",
+        "rationale": "Special characters can break tracking systems"
+      },
+      {
+        "rule": "Use consistent naming across channels",
+        "description": "Same campaign name across all channels",
+        "example": "product-launch-2025-01",
+        "rationale": "Consistency enables cross-channel reporting"
+      },
+      {
+        "rule": "Include channel identifier if needed",
+        "description": "Add channel suffix only if necessary for differentiation",
+        "example": "product-launch-2025-01-email",
+        "rationale": "Channel identifiers help when same campaign runs on multiple channels"
+      },
+      {
+        "rule": "Use abbreviations consistently",
+        "description": "Define and use standard abbreviations",
+        "example": "q1-2025-webinar-series",
+        "rationale": "Consistent abbreviations improve readability"
+      },
+      {
+        "rule": "Include product/service name",
+        "description": "Include product or service name when relevant",
+        "example": "enterprise-plan-promo-2025",
+        "rationale": "Product names help identify campaign purpose"
+      }
+    ],
+    "examples": {
+      "good": [
+        "product-launch-2025-01",
+        "summer-sale-2025-06",
+        "webinar-lead-gen-q1",
+        "email-nurture-series-2025"
+      ],
+      "bad": [
+        "Product Launch 2025",
+        "summer_sale_2025",
+        "Webinar!!!",
+        "campaign-2025-@#$"
+      ]
+    }
+  }
+}
+
