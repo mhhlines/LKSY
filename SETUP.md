@@ -172,3 +172,4 @@ Set project: `gcloud config set project visual-validation`
 3. Visit the frontend: `https://lksy.org`
 4. Set up monitoring in GCP Console
 
+

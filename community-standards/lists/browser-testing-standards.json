@@ -1,0 +1,81 @@
+{
+  "id": "browser-testing-standards",
+  "version": "1.0.0",
+  "name": "Browser Testing Standards",
+  "description": "Priority browsers and versions for web testing",
+  "type": "values",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "web",
+    "testing",
+    "browsers",
+    "compatibility"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Browser Testing Standards v1.0.0 | lksy.org",
+    "description": "Priority browsers and versions for web testing. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "web",
+      "testing",
+      "browsers",
+      "compatibility",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "values": {
+    "items": [
+      {
+        "id": "browser-testing-standards-1",
+        "Browser Name": "Chrome",
+        "Market Share %": "63.7",
+        "Test Priority": "Critical",
+        "Versions to Test": "Latest 2",
+        "Notes": "Chromium-based, 65%+ market share"
+      },
+      {
+        "id": "browser-testing-standards-2",
+        "Browser Name": "Safari",
+        "Market Share %": "16.0",
+        "Test Priority": "Critical",
+        "Versions to Test": "Latest 2",
+        "Notes": "iOS/macOS default, WebKit engine"
+      },
+      {
+        "id": "browser-testing-standards-3",
+        "Browser Name": "Edge",
+        "Market Share %": "5.5",
+        "Test Priority": "Major",
+        "Versions to Test": "Latest 2",
+        "Notes": "Chromium-based, Windows default"
+      },
+      {
+        "id": "browser-testing-standards-4",
+        "Browser Name": "Firefox",
+        "Market Share %": "2.5",
+        "Test Priority": "Major",
+        "Versions to Test": "Latest 2",
+        "Notes": "Gecko engine"
+      },
+      {
+        "id": "browser-testing-standards-5",
+        "Browser Name": "Samsung Internet",
+        "Market Share %": "2.3",
+        "Test Priority": "Minor",
+        "Versions to Test": "Latest 1",
+        "Notes": "Android devices"
+      },
+      {
+        "id": "browser-testing-standards-6",
+        "Browser Name": "Opera",
+        "Market Share %": "1.5",
+        "Test Priority": "Minor",
+        "Versions to Test": "Latest 1",
+        "Notes": "Chromium-based"
+      }
+    ]
+  }
+}

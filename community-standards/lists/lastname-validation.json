@@ -1,0 +1,95 @@
+{
+  "id": "lastname-validation",
+  "version": "1.0.0",
+  "name": "Last Name Validation Standards",
+  "description": "Validation rules and checks for last name personalization",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "validation",
+    "personalization",
+    "data-quality"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Last Name Validation Standards v1.0.0 | lksy.org",
+    "description": "Validation rules and checks for last name personalization. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "validation",
+      "personalization",
+      "data-quality",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "checks": [
+    {
+      "id": "contains-unreplaced-token",
+      "name": "Contains unreplaced token",
+      "severity": "critical",
+      "description": "Personalization token not replaced",
+      "rationale": "Pattern: [LASTNAME], {{lastName}}, %LAST_NAME%",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "minimum-length-1-character",
+      "name": "Minimum length 1 character",
+      "severity": "critical",
+      "description": "Cannot be empty",
+      "rationale": "Pattern: len >= 1",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "maximum-length-50-characters",
+      "name": "Maximum length 50 characters",
+      "severity": "major",
+      "description": "Reasonable name length",
+      "rationale": "Pattern: len <= 50",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "valid-characters-only",
+      "name": "Valid characters only",
+      "severity": "major",
+      "description": "a-zA-Z\\s'-",
+      "rationale": "Pattern: Letters, spaces, hyphens, apostrophes",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "not-all-numbers",
+      "name": "Not all numbers",
+      "severity": "critical",
+      "description": "123456 is not a name",
+      "rationale": "Pattern: Not only digits",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "not-test-placeholder",
+      "name": "Not test/placeholder",
+      "severity": "major",
+      "description": "Common test values",
+      "rationale": "Pattern: test, asdf, xxxx, default",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    }
+  ]
+}

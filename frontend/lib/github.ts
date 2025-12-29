@@ -1,4 +1,5 @@
 import { Octokit } from '@octokit/rest';
+import { parse as parseYaml } from 'yaml';
 import { List } from '@/shared/types';
 
 const octokit = new Octokit({
@@ -7,6 +8,20 @@ const octokit = new Octokit({
 
 const OWNER = process.env.GITHUB_OWNER || 'mhhlines';
 const REPO = process.env.GITHUB_REPO || 'LKSY';
+
+// Helper function to parse content based on file extension
+function parseListContent(content: string, filename: string): List | null {
+  try {
+    if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
+      return parseYaml(content) as List;
+    } else {
+      return JSON.parse(content) as List;
+    }
+  } catch (error) {
+    console.error(`Error parsing ${filename}:`, error);
+    return null;
+  }
+}
 
 export async function getLists(): Promise<List[]> {
   try {
@@ -21,7 +36,10 @@ export async function getLists(): Promise<List[]> {
     }
 
     const listPromises = data
-      .filter((item) => item.type === 'file' && item.name.endsWith('.json'))
+      .filter((item) => 
+        item.type === 'file' && 
+        (item.name.endsWith('.json') || item.name.endsWith('.yaml') || item.name.endsWith('.yml'))
+      )
       .map(async (file) => {
         try {
           const { data: fileData } = await octokit.repos.getContent({
@@ -32,7 +50,7 @@ export async function getLists(): Promise<List[]> {
 
           if ('content' in fileData && fileData.content) {
             const content = Buffer.from(fileData.content, 'base64').toString('utf-8');
-            return JSON.parse(content) as List;
+            return parseListContent(content, file.name);
           }
         } catch (error) {
           console.error(`Error fetching ${file.path}:`, error);
@@ -67,7 +85,8 @@ export async function getList(id: string, version?: string): Promise<List | null
 
     if ('content' in data && data.content) {
       const content = Buffer.from(data.content, 'base64').toString('utf-8');
-      return JSON.parse(content) as List;
+      const filename = path.split('/').pop() || '';
+      return parseListContent(content, filename);
     }
 
     return null;

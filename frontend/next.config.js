@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   env: {
-    GITHUB_OWNER: process.env.GITHUB_OWNER || 'lksy-org',
-    GITHUB_REPO: process.env.GITHUB_REPO || 'community-standards',
+    GITHUB_OWNER: process.env.GITHUB_OWNER || 'mhhlines',
+    GITHUB_REPO: process.env.GITHUB_REPO || 'LKSY',
   },
   async rewrites() {
     return [

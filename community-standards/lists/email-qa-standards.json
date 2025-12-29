@@ -1,0 +1,229 @@
+{
+  "id": "email-qa-standards",
+  "version": "1.0.0",
+  "name": "Email QA Standards",
+  "description": "Comprehensive quality assurance checks for email campaigns",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "email",
+    "qa",
+    "quality",
+    "testing"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Email QA Standards v1.0.0 | lksy.org",
+    "description": "Comprehensive quality assurance checks for email campaigns. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "email",
+      "qa",
+      "quality",
+      "testing",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "checks": [
+    {
+      "id": "web-fonts-have-fallback-fonts",
+      "name": "Web fonts have fallback fonts",
+      "severity": "major",
+      "description": "Arial, Helvetica, Georgia as fallbacks",
+      "rationale": "Category: Typography",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "minimum-font-size-14px-body",
+      "name": "Minimum font size 14px body",
+      "severity": "major",
+      "description": "Readability standard",
+      "rationale": "Category: Typography",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "text-contrast---4-5-1",
+      "name": "Text contrast ≥ 4.5:1",
+      "severity": "critical",
+      "description": "WCAG AA compliance",
+      "rationale": "Category: Color",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "no-white-on-white",
+      "name": "No white on white",
+      "severity": "critical",
+      "description": "Common rendering error",
+      "rationale": "Category: Color",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "all-links-functional",
+      "name": "All links functional",
+      "severity": "critical",
+      "description": "No 404 errors",
+      "rationale": "Category: Content",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "all-images-have-alt-text",
+      "name": "All images have alt text",
+      "severity": "critical",
+      "description": "WCAG requirement",
+      "rationale": "Category: Content",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "no-personalization-tokens",
+      "name": "No personalization tokens",
+      "severity": "critical",
+      "description": "[FIRSTNAME] not replaced",
+      "rationale": "Category: Content",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "no-lorem-ipsum",
+      "name": "No Lorem ipsum",
+      "severity": "critical",
+      "description": "No placeholder text",
+      "rationale": "Category: Content",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "renders-in-gmail",
+      "name": "Renders in Gmail",
+      "severity": "critical",
+      "description": "30%+ market share",
+      "rationale": "Category: Rendering",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "renders-in-outlook",
+      "name": "Renders in Outlook",
+      "severity": "critical",
+      "description": "Business standard",
+      "rationale": "Category: Rendering",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "mobile-responsive",
+      "name": "Mobile responsive",
+      "severity": "critical",
+      "description": "Single column mobile",
+      "rationale": "Category: Rendering",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "spf-record-valid",
+      "name": "SPF record valid",
+      "severity": "critical",
+      "description": "Email authentication",
+      "rationale": "Category: Deliverability",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "dkim-configured",
+      "name": "DKIM configured",
+      "severity": "critical",
+      "description": "Email authentication",
+      "rationale": "Category: Deliverability",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "unsubscribe-link-present",
+      "name": "Unsubscribe link present",
+      "severity": "critical",
+      "description": "CAN-SPAM required",
+      "rationale": "Category: Compliance",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "physical-address-present",
+      "name": "Physical address present",
+      "severity": "critical",
+      "description": "CAN-SPAM required",
+      "rationale": "Category: Compliance",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "html-validates",
+      "name": "HTML validates",
+      "severity": "major",
+      "description": "W3C validation",
+      "rationale": "Category: Technical",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "no-javascript",
+      "name": "No JavaScript",
+      "severity": "critical",
+      "description": "Not supported in email",
+      "rationale": "Category: Technical",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "size---102kb",
+      "name": "Size < 102KB",
+      "severity": "major",
+      "description": "Gmail clipping threshold",
+      "rationale": "Category: Technical",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    }
+  ]
+}

@@ -52,3 +52,4 @@ postgresql://lksy_user:YOUR_PASSWORD@/lksy?host=/cloudsql/visual-validation:us-c
 3. Update `api/.env` with OAuth credentials
 4. Run `./deploy.sh` to deploy (database password will be generated)
 
+

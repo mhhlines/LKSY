@@ -1,0 +1,95 @@
+{
+  "id": "company-validation",
+  "version": "1.0.0",
+  "name": "Company Name Validation Standards",
+  "description": "Validation rules and checks for company name personalization",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "validation",
+    "personalization",
+    "data-quality"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Company Name Validation Standards v1.0.0 | lksy.org",
+    "description": "Validation rules and checks for company name personalization. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "validation",
+      "personalization",
+      "data-quality",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "checks": [
+    {
+      "id": "contains-unreplaced-token",
+      "name": "Contains unreplaced token",
+      "severity": "critical",
+      "description": "Personalization token not replaced",
+      "rationale": "Pattern: [COMPANY], {{company}}, %COMPANY_NAME%",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "minimum-length-2-characters",
+      "name": "Minimum length 2 characters",
+      "severity": "critical",
+      "description": "Company name too short",
+      "rationale": "Pattern: len >= 2",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "maximum-length-100-characters",
+      "name": "Maximum length 100 characters",
+      "severity": "major",
+      "description": "Reasonable company name length",
+      "rationale": "Pattern: len <= 100",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "valid-characters",
+      "name": "Valid characters",
+      "severity": "major",
+      "description": "Business name characters",
+      "rationale": "Pattern: Letters, numbers, spaces, &, Inc, LLC, Ltd",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "not-test-placeholder",
+      "name": "Not test/placeholder",
+      "severity": "major",
+      "description": "Common test values",
+      "rationale": "Pattern: test, company, acme, default",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "not-misspelled--company-",
+      "name": "Not misspelled 'company'",
+      "severity": "minor",
+      "description": "Common typos",
+      "rationale": "Pattern: compnay, comapny, conpany",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    }
+  ]
+}

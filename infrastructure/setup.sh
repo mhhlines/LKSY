@@ -63,3 +63,4 @@ echo "1. Run terraform apply to create Cloud Run services"
 echo "2. Configure domain mapping for lksy.org"
 echo "3. Set up Cloud Build triggers"
 
+

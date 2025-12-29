@@ -19,3 +19,4 @@ resource "google_compute_backend_service" "lksy_backend" {
 # Note: Domain mapping for Cloud Run can also be done via:
 # gcloud run domain-mappings create --service lksy-frontend --domain lksy.org --region us-central1
 
+

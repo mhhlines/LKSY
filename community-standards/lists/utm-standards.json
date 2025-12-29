@@ -2,197 +2,80 @@
   "id": "utm-standards",
   "version": "1.0.0",
   "name": "UTM Parameter Standards",
-  "description": "Standardized values for campaign tracking with UTM parameters",
+  "description": "Standard values and formats for UTM tracking parameters",
   "type": "values",
   "status": "active",
   "maintainers": [],
-  "tags": ["marketing", "analytics", "tracking", "utm"],
-  "first_published": "2025-01-21",
-  "last_updated": "2025-01-21",
+  "tags": [
+    "analytics",
+    "tracking",
+    "utm",
+    "marketing"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
   "seo": {
     "title": "UTM Parameter Standards v1.0.0 | lksy.org",
-    "description": "Community-maintained standardized UTM parameter values for campaign tracking. Free, open source, version-controlled.",
-    "keywords": ["utm parameters", "campaign tracking", "marketing analytics", "utm standards"]
+    "description": "Standard values and formats for UTM tracking parameters. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "analytics",
+      "tracking",
+      "utm",
+      "marketing",
+      "community standards",
+      "qa standards"
+    ]
   },
   "values": {
-    "utm_source": {
-      "description": "The referrer source (e.g., google, facebook, newsletter)",
-      "values": [
-        {
-          "value": "google",
-          "description": "Google search or display",
-          "when_to_use": "Any Google-based traffic",
-          "examples": ["google", "google_ads"]
-        },
-        {
-          "value": "linkedin",
-          "description": "LinkedIn organic or paid",
-          "when_to_use": "LinkedIn posts, ads, sponsored content",
-          "examples": ["linkedin", "linkedin_ads"]
-        },
-        {
-          "value": "facebook",
-          "description": "Facebook organic or paid",
-          "when_to_use": "Facebook posts, ads, sponsored content",
-          "examples": ["facebook", "facebook_ads"]
-        },
-        {
-          "value": "twitter",
-          "description": "Twitter/X organic or paid",
-          "when_to_use": "Twitter posts, promoted tweets",
-          "examples": ["twitter", "twitter_ads"]
-        },
-        {
-          "value": "email",
-          "description": "Email campaigns",
-          "when_to_use": "Newsletters, email marketing campaigns",
-          "examples": ["email", "newsletter"]
-        },
-        {
-          "value": "direct",
-          "description": "Direct traffic",
-          "when_to_use": "Direct URL entry, bookmarks",
-          "examples": ["direct"]
-        },
-        {
-          "value": "organic",
-          "description": "Organic search",
-          "when_to_use": "Non-paid search results",
-          "examples": ["organic"]
-        },
-        {
-          "value": "referral",
-          "description": "Referral from another website",
-          "when_to_use": "Links from external websites",
-          "examples": ["referral"]
-        },
-        {
-          "value": "partner",
-          "description": "Partner or affiliate traffic",
-          "when_to_use": "Partner websites, affiliate links",
-          "examples": ["partner", "affiliate"]
-        },
-        {
-          "value": "webinar",
-          "description": "Webinar registration or attendance",
-          "when_to_use": "Webinar landing pages, registration links",
-          "examples": ["webinar"]
-        },
-        {
-          "value": "podcast",
-          "description": "Podcast promotion",
-          "when_to_use": "Podcast show notes, mentions",
-          "examples": ["podcast"]
-        },
-        {
-          "value": "youtube",
-          "description": "YouTube videos",
-          "when_to_use": "YouTube video descriptions, cards",
-          "examples": ["youtube"]
-        }
-      ]
-    },
-    "utm_medium": {
-      "description": "The marketing medium (e.g., cpc, email, social)",
-      "values": [
-        {
-          "value": "cpc",
-          "description": "Cost per click (paid search)",
-          "when_to_use": "Google Ads, Bing Ads, paid search",
-          "examples": ["cpc"]
-        },
-        {
-          "value": "cpm",
-          "description": "Cost per mille (display advertising)",
-          "when_to_use": "Display ads, banner ads",
-          "examples": ["cpm"]
-        },
-        {
-          "value": "email",
-          "description": "Email marketing",
-          "when_to_use": "Email campaigns, newsletters",
-          "examples": ["email"]
-        },
-        {
-          "value": "social",
-          "description": "Social media (organic)",
-          "when_to_use": "Organic social media posts",
-          "examples": ["social"]
-        },
-        {
-          "value": "social-paid",
-          "description": "Paid social media",
-          "when_to_use": "Paid social media ads",
-          "examples": ["social-paid"]
-        },
-        {
-          "value": "referral",
-          "description": "Referral traffic",
-          "when_to_use": "Links from other websites",
-          "examples": ["referral"]
-        },
-        {
-          "value": "affiliate",
-          "description": "Affiliate marketing",
-          "when_to_use": "Affiliate partner links",
-          "examples": ["affiliate"]
-        },
-        {
-          "value": "organic",
-          "description": "Organic search",
-          "when_to_use": "Organic search results",
-          "examples": ["organic"]
-        }
-      ]
-    },
-    "utm_campaign": {
-      "description": "Campaign naming conventions",
-      "rules": [
-        {
-          "rule": "Use lowercase with hyphens",
-          "description": "Format: campaign-name-2025-01",
-          "example": "product-launch-2025-01"
-        },
-        {
-          "rule": "Include date for time-bound campaigns",
-          "description": "Add year-month for campaigns with end dates",
-          "example": "summer-sale-2025-06"
-        },
-        {
-          "rule": "Be descriptive but concise",
-          "description": "Use clear, specific names",
-          "example": "webinar-lead-gen-q1"
-        },
-        {
-          "rule": "Avoid special characters",
-          "description": "No spaces, underscores (except in source/medium), or special chars",
-          "example": "campaign-name-2025"
-        },
-        {
-          "rule": "Use consistent naming across channels",
-          "description": "Same campaign name across all channels for same campaign",
-          "example": "product-launch-2025-01"
-        }
-      ]
-    },
-    "utm_term": {
-      "description": "Search terms (for paid search)",
-      "guidelines": [
-        "Use for paid search campaigns",
-        "Include actual search terms",
-        "Use lowercase with hyphens",
-        "Example: 'email-marketing-software'"
-      ]
-    },
-    "utm_content": {
-      "description": "Content identifier (for A/B testing)",
-      "guidelines": [
-        "Use to differentiate similar links",
-        "Use for A/B testing",
-        "Use descriptive identifiers",
-        "Example: 'cta-button-red' or 'email-header-v2'"
-      ]
-    }
+    "items": [
+      {
+        "id": "utm-standards-1",
+        "Parameter": "utm_source",
+        "Standard Values": "google, facebook, linkedin, twitter, email, newsletter",
+        "When to Use": "Platform/referrer",
+        "Format Rules": "lowercase, no spaces",
+        "Examples": "google, linkedin, newsletter"
+      },
+      {
+        "id": "utm-standards-2",
+        "Parameter": "utm_medium",
+        "Standard Values": "cpc, email, social, organic, referral, display",
+        "When to Use": "Marketing medium",
+        "Format Rules": "lowercase, no spaces",
+        "Examples": "cpc, email, social"
+      },
+      {
+        "id": "utm-standards-3",
+        "Parameter": "utm_campaign",
+        "Standard Values": "product-launch, summer-sale, webinar-q1",
+        "When to Use": "Campaign name",
+        "Format Rules": "lowercase, dashes",
+        "Examples": "product-launch-2024"
+      },
+      {
+        "id": "utm-standards-4",
+        "Parameter": "utm_term",
+        "Standard Values": "paid keywords",
+        "When to Use": "Paid search keywords",
+        "Format Rules": "lowercase, plus signs",
+        "Examples": "running+shoes"
+      },
+      {
+        "id": "utm-standards-5",
+        "Parameter": "utm_content",
+        "Standard Values": "header-cta, sidebar-link",
+        "When to Use": "A/B test variants",
+        "Format Rules": "lowercase, dashes",
+        "Examples": "header-cta, button-blue"
+      },
+      {
+        "id": "utm-standards-6",
+        "Parameter": "Naming Rules",
+        "Standard Values": "Always lowercase",
+        "When to Use": "Use dashes not underscores",
+        "Format Rules": "Be descriptive",
+        "Examples": "Consistent format"
+      }
+    ]
   }
 }
-

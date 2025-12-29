@@ -44,11 +44,16 @@ export async function incrementUsageCount(list_id: string, version: string): Pro
 }
 
 export async function getAllCachedLists(): Promise<List[]> {
-  const result = await query(
-    `SELECT DISTINCT ON (list_id) *
-     FROM list_cache
-     ORDER BY list_id, version DESC`
-  );
-  return result.rows.map(row => row.content as List);
+  try {
+    const result = await query(
+      `SELECT DISTINCT ON (list_id) *
+       FROM list_cache
+       ORDER BY list_id, version DESC`
+    );
+    return result.rows.map(row => row.content as List);
+  } catch (error) {
+    console.warn('Database query failed, returning empty cache:', error);
+    return [];
+  }
 }
 

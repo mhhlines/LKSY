@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { getListFromGitHub, getAllListsFromGitHub } from '../services/github';
 import { getCachedList, cacheList, getAllCachedLists, incrementUsageCount } from '../db/models/list-cache';
 import { recordView, recordDownload, recordApiCall } from '../db/models/list-usage';
-import { List } from '../../../shared/types';
+import { List } from '../../shared/types';
 
 export const listsRouter = Router();
 
@@ -11,14 +11,31 @@ listsRouter.get('/', async (req, res) => {
   try {
     const { tags, search } = req.query;
     
-    let lists = await getAllCachedLists();
+    // Try to get from cache, but don't fail if database is unavailable
+    let lists: List[] = [];
+    try {
+      lists = await getAllCachedLists();
+    } catch (cacheError) {
+      console.warn('Cache unavailable, fetching from GitHub:', cacheError);
+    }
     
     // If cache is empty, fetch from GitHub
     if (lists.length === 0) {
-      lists = await getAllListsFromGitHub();
-      // Cache all lists
-      for (const list of lists) {
-        await cacheList(list);
+      try {
+        lists = await getAllListsFromGitHub();
+        // Cache all lists (only if we have a database connection)
+        if (lists.length > 0) {
+          try {
+            for (const list of lists) {
+              await cacheList(list);
+            }
+          } catch (dbError) {
+            console.warn('Database caching failed, continuing without cache:', dbError);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching lists from GitHub:', error);
+        return res.status(500).json({ error: 'Failed to fetch lists', details: error instanceof Error ? error.message : 'Unknown error' });
       }
     }
     

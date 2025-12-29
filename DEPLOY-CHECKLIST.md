@@ -102,3 +102,4 @@ This will:
 - **"Project not found"**: Verify project ID is correct
 - **Database connection errors**: Wait a few minutes after database creation, then update .env
 
+

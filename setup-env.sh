@@ -98,3 +98,4 @@ echo "1. Review the .env files and update if needed"
 echo "2. Run ./deploy.sh to deploy to Google Cloud"
 echo ""
 
+

@@ -1,0 +1,242 @@
+{
+  "id": "webpage-qa-standards",
+  "version": "1.0.0",
+  "name": "Webpage QA Standards",
+  "description": "Comprehensive quality assurance checks for web pages",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "web",
+    "qa",
+    "quality",
+    "testing",
+    "performance"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Webpage QA Standards v1.0.0 | lksy.org",
+    "description": "Comprehensive quality assurance checks for web pages. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "web",
+      "qa",
+      "quality",
+      "testing",
+      "performance",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "checks": [
+    {
+      "id": "lcp---2-5s",
+      "name": "LCP < 2.5s",
+      "severity": "critical",
+      "description": "Core Web Vital",
+      "rationale": "Category: Performance",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "fid---100ms",
+      "name": "FID < 100ms",
+      "severity": "critical",
+      "description": "Core Web Vital",
+      "rationale": "Category: Performance",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "cls---0-1",
+      "name": "CLS < 0.1",
+      "severity": "major",
+      "description": "Core Web Vital",
+      "rationale": "Category: Performance",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "min-font-16px-body",
+      "name": "Min font 16px body",
+      "severity": "major",
+      "description": "Web readability standard",
+      "rationale": "Category: Typography",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "text-contrast---4-5-1",
+      "name": "Text contrast ≥ 4.5:1",
+      "severity": "critical",
+      "description": "WCAG AA",
+      "rationale": "Category: Color",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "page-title-present",
+      "name": "Page title present",
+      "severity": "critical",
+      "description": "Required for SEO",
+      "rationale": "Category: SEO",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "h1-present",
+      "name": "H1 present",
+      "severity": "critical",
+      "description": "One H1 per page",
+      "rationale": "Category: SEO",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "alt-text-on-images",
+      "name": "Alt text on images",
+      "severity": "critical",
+      "description": "Required for accessibility",
+      "rationale": "Category: SEO",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "keyboard-navigation-works",
+      "name": "Keyboard navigation works",
+      "severity": "critical",
+      "description": "Use only keyboard",
+      "rationale": "Category: Accessibility",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "focus-indicators-visible",
+      "name": "Focus indicators visible",
+      "severity": "critical",
+      "description": "Keyboard accessibility",
+      "rationale": "Category: Accessibility",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "form-labels-associated",
+      "name": "Form labels associated",
+      "severity": "critical",
+      "description": "for/id matching",
+      "rationale": "Category: Accessibility",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "https-enabled",
+      "name": "HTTPS enabled",
+      "severity": "critical",
+      "description": "Valid SSL certificate",
+      "rationale": "Category: Security",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "csp-header-present",
+      "name": "CSP header present",
+      "severity": "major",
+      "description": "Content-Security-Policy",
+      "rationale": "Category: Security",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "viewport-meta-tag",
+      "name": "Viewport meta tag",
+      "severity": "critical",
+      "description": "Mobile responsiveness",
+      "rationale": "Category: Mobile",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "touch-targets---48px",
+      "name": "Touch targets ≥ 48px",
+      "severity": "major",
+      "description": "Mobile usability",
+      "rationale": "Category: Mobile",
+      "automatable": false,
+      "detection_method": "manual_review",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "valid-html5",
+      "name": "Valid HTML5",
+      "severity": "major",
+      "description": "W3C validation",
+      "rationale": "Category: HTML/CSS",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "semantic-html",
+      "name": "Semantic HTML",
+      "severity": "major",
+      "description": "header, nav, main, etc.",
+      "rationale": "Category: HTML/CSS",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "no-404-links",
+      "name": "No 404 links",
+      "severity": "critical",
+      "description": "All links work",
+      "rationale": "Category: Functional",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "no-js-errors",
+      "name": "No JS errors",
+      "severity": "major",
+      "description": "Console errors",
+      "rationale": "Category: Functional",
+      "automatable": true,
+      "detection_method": "code_analysis",
+      "false_positive_rate": "medium",
+      "status": "approved"
+    }
+  ]
+}

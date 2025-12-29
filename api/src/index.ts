@@ -14,6 +14,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Trust proxy for Cloud Run
+app.set('trust proxy', true);
+
 // Middleware
 app.use(helmet());
 app.use(cors({
@@ -22,11 +25,13 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Rate limiting
+// Rate limiting - configure for Cloud Run
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
   max: process.env.NODE_ENV === 'production' ? 1000 : 10000,
   message: 'Too many requests from this IP, please try again later.',
+  standardHeaders: true,
+  legacyHeaders: false,
 });
 app.use('/api/', limiter);
 

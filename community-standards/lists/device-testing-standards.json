@@ -1,0 +1,107 @@
+{
+  "id": "device-testing-standards",
+  "version": "1.0.0",
+  "name": "Device Testing Standards",
+  "description": "Standard device viewports and breakpoints for responsive testing",
+  "type": "values",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "web",
+    "testing",
+    "devices",
+    "responsive",
+    "viewport"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Device Testing Standards v1.0.0 | lksy.org",
+    "description": "Standard device viewports and breakpoints for responsive testing. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "web",
+      "testing",
+      "devices",
+      "responsive",
+      "viewport",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "values": {
+    "items": [
+      {
+        "id": "device-testing-standards-1",
+        "Device Type": "Mobile - Small",
+        "Viewport Width": "375",
+        "Viewport Height": "667",
+        "Test Priority": "Critical",
+        "Device Example": "iPhone SE",
+        "Notes": "Small phone viewport"
+      },
+      {
+        "id": "device-testing-standards-2",
+        "Device Type": "Mobile - Standard",
+        "Viewport Width": "390",
+        "Viewport Height": "844",
+        "Test Priority": "Critical",
+        "Device Example": "iPhone 13/14",
+        "Notes": "Modern iPhone"
+      },
+      {
+        "id": "device-testing-standards-3",
+        "Device Type": "Mobile - Android",
+        "Viewport Width": "360",
+        "Viewport Height": "800",
+        "Test Priority": "Critical",
+        "Device Example": "Samsung Galaxy",
+        "Notes": "Standard Android"
+      },
+      {
+        "id": "device-testing-standards-4",
+        "Device Type": "Tablet - iPad",
+        "Viewport Width": "768",
+        "Viewport Height": "1024",
+        "Test Priority": "Major",
+        "Device Example": "iPad",
+        "Notes": "Standard tablet"
+      },
+      {
+        "id": "device-testing-standards-5",
+        "Device Type": "Tablet - Android",
+        "Viewport Width": "810",
+        "Viewport Height": "1080",
+        "Test Priority": "Major",
+        "Device Example": "Android Tablet",
+        "Notes": "Android tablet"
+      },
+      {
+        "id": "device-testing-standards-6",
+        "Device Type": "Desktop - HD",
+        "Viewport Width": "1920",
+        "Viewport Height": "1080",
+        "Test Priority": "Critical",
+        "Device Example": "Standard Monitor",
+        "Notes": "Most common desktop"
+      },
+      {
+        "id": "device-testing-standards-7",
+        "Device Type": "Desktop - Laptop",
+        "Viewport Width": "1366",
+        "Viewport Height": "768",
+        "Test Priority": "Major",
+        "Device Example": "Laptop",
+        "Notes": "Common laptop resolution"
+      },
+      {
+        "id": "device-testing-standards-8",
+        "Device Type": "Desktop - 2K",
+        "Viewport Width": "2560",
+        "Viewport Height": "1440",
+        "Test Priority": "Minor",
+        "Device Example": "High-res Monitor",
+        "Notes": "High resolution"
+      }
+    ]
+  }
+}

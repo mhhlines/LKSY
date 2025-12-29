@@ -43,30 +43,36 @@ authRouter.get('/callback', async (req, res) => {
       }),
     });
     
-    const tokenData = await tokenResponse.json();
-    
-    if (!tokenData.access_token) {
-      return res.status(400).json({ error: 'Failed to get access token' });
-    }
-    
-    // Get user info from GitHub
-    const userResponse = await fetch('https://api.github.com/user', {
-      headers: {
-        'Authorization': `token ${tokenData.access_token}`,
-        'Accept': 'application/vnd.github.v3+json',
-      },
-    });
-    
-    const githubUser = await userResponse.json();
-    
-    // Create or update user in database
-    const user = await createUser({
-      github_id: githubUser.id.toString(),
-      github_username: githubUser.login,
-      name: githubUser.name,
-      avatar_url: githubUser.avatar_url,
-      email: githubUser.email,
-    });
+      const tokenData = await tokenResponse.json() as { access_token?: string };
+
+      if (!tokenData.access_token) {
+        return res.status(400).json({ error: 'Failed to get access token' });
+      }
+
+      // Get user info from GitHub
+      const userResponse = await fetch('https://api.github.com/user', {
+        headers: {
+          'Authorization': `token ${tokenData.access_token}`,
+          'Accept': 'application/vnd.github.v3+json',
+        },
+      });
+
+      const githubUser = await userResponse.json() as {
+        id: number;
+        login: string;
+        name?: string;
+        avatar_url?: string;
+        email?: string;
+      };
+
+      // Create or update user in database
+      const user = await createUser({
+        github_id: githubUser.id.toString(),
+        github_username: githubUser.login,
+        name: githubUser.name,
+        avatar_url: githubUser.avatar_url,
+        email: githubUser.email,
+      });
     
     // Generate JWT token
     const token = jwt.sign(

@@ -3,8 +3,8 @@ FROM node:20-alpine AS base
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
-COPY frontend/package.json frontend/package-lock.json* ./
-RUN npm ci
+COPY frontend/package.json ./
+RUN npm install
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -23,9 +23,9 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# Public directory is optional - Next.js standalone mode includes it in .next/standalone
 
 USER nextjs
 

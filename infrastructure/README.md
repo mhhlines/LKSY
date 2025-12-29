@@ -60,3 +60,4 @@ gcloud run domain-mappings create \
 
 Then update DNS records as instructed by the command output.
 
+

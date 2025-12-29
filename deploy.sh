@@ -68,26 +68,40 @@ fi
 # Build and deploy services
 echo "🏗️  Building Docker images..."
 
+# Create temporary cloudbuild files for each service
+create_build_config() {
+    local service=$1
+    local dockerfile=$2
+    local image=$3
+    cat > /tmp/cloudbuild-${service}.yaml << EOF
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', '${image}:latest', '-f', '${dockerfile}', '.']
+images:
+- '${image}:latest'
+EOF
+}
+
 # Frontend
 echo "Building frontend..."
-cd frontend
-gcloud builds submit --tag gcr.io/$PROJECT_ID/lksy-frontend --project=$PROJECT_ID || {
+create_build_config "frontend" "docker/frontend.Dockerfile" "gcr.io/$PROJECT_ID/lksy-frontend"
+gcloud builds submit --config=/tmp/cloudbuild-frontend.yaml --project=$PROJECT_ID . || {
     echo "❌ Frontend build failed. Make sure you have Docker installed and Cloud Build API enabled."
     exit 1
 }
 
 # API
 echo "Building API..."
-cd ../api
-gcloud builds submit --tag gcr.io/$PROJECT_ID/lksy-api --project=$PROJECT_ID || {
+create_build_config "api" "docker/api.Dockerfile" "gcr.io/$PROJECT_ID/lksy-api"
+gcloud builds submit --config=/tmp/cloudbuild-api.yaml --project=$PROJECT_ID . || {
     echo "❌ API build failed."
     exit 1
 }
 
 # MCP Server
 echo "Building MCP server..."
-cd ../mcp-server
-gcloud builds submit --tag gcr.io/$PROJECT_ID/lksy-mcp-server --project=$PROJECT_ID || {
+create_build_config "mcp" "docker/mcp-server.Dockerfile" "gcr.io/$PROJECT_ID/lksy-mcp-server"
+gcloud builds submit --config=/tmp/cloudbuild-mcp.yaml --project=$PROJECT_ID . || {
     echo "❌ MCP server build failed."
     exit 1
 }
@@ -107,7 +121,7 @@ gcloud run deploy lksy-frontend \
   --platform managed \
   --region $REGION \
   --allow-unauthenticated \
-  --set-env-vars="NEXT_PUBLIC_API_URL=https://api.lksy.org,GITHUB_OWNER=lksy-org,GITHUB_REPO=community-standards" \
+  --set-env-vars="NEXT_PUBLIC_API_URL=https://lksy-api-722879364416.us-central1.run.app,GITHUB_OWNER=mhhlines,GITHUB_REPO=LKSY" \
   --project $PROJECT_ID \
   --quiet || echo "⚠️  Frontend deployment had issues. Check logs."
 
@@ -132,6 +146,7 @@ else
       --region $REGION \
       --allow-unauthenticated \
       --add-cloudsql-instances=$CONNECTION_NAME \
+      --set-env-vars="PORT=8080" \
       --project $PROJECT_ID \
       --quiet || echo "⚠️  API deployment had issues. Check logs."
 fi

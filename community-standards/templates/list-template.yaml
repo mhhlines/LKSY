@@ -1,0 +1,32 @@
+id: example-list
+name: Example List
+version: "1.0.0"
+description: A description of what this list contains
+type: values  # or "checks"
+tags:
+  - example
+  - template
+last_updated: "2025-01-01T00:00:00Z"
+author:
+  name: Your Name
+  email: your.email@example.com
+  github: yourusername
+
+# For type: "values"
+values:
+  - value: "example-value-1"
+    description: "Description of value 1"
+    category: "category1"
+  - value: "example-value-2"
+    description: "Description of value 2"
+    category: "category2"
+
+# For type: "checks" (uncomment if using checks instead)
+# checks:
+#   - id: "check-1"
+#     name: "Check Name"
+#     description: "What this check validates"
+#     category: "validation"
+#     severity: "error"  # or "warning", "info"
+
+

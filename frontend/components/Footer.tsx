@@ -36,7 +36,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://github.com/lksy-org/community-standards"
+                  href="https://github.com/mhhlines/LKSY"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-primary-600"

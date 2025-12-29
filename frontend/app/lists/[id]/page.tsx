@@ -46,3 +46,4 @@ export default async function ListPage({ params, searchParams }: Props) {
   return <ListDetail list={list} versions={versions} />;
 }
 
+

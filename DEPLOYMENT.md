@@ -268,3 +268,4 @@ gcloud builds triggers create github \
 3. Set up CI/CD pipelines
 4. Configure custom domain SSL certificates (automatic with Cloud Run)
 
+

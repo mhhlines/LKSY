@@ -1,0 +1,81 @@
+{
+  "id": "email-client-standards",
+  "version": "1.0.0",
+  "name": "Email Client Testing Standards",
+  "description": "Priority email clients and platforms for testing",
+  "type": "values",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "email",
+    "testing",
+    "clients",
+    "compatibility"
+  ],
+  "first_published": "2025-12-29",
+  "last_updated": "2025-12-29",
+  "seo": {
+    "title": "Email Client Testing Standards v1.0.0 | lksy.org",
+    "description": "Priority email clients and platforms for testing. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "email",
+      "testing",
+      "clients",
+      "compatibility",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "values": {
+    "items": [
+      {
+        "id": "email-client-standards-1",
+        "Client Name": "Apple Mail (MPP)",
+        "Market Share %": "55.0",
+        "Test Priority": "Critical",
+        "Platform": "iOS/macOS",
+        "Notes": "Mail Privacy Protection affects tracking"
+      },
+      {
+        "id": "email-client-standards-2",
+        "Client Name": "Gmail",
+        "Market Share %": "30.6",
+        "Test Priority": "Critical",
+        "Platform": "Web/Mobile",
+        "Notes": "Most used webmail"
+      },
+      {
+        "id": "email-client-standards-3",
+        "Client Name": "Outlook",
+        "Market Share %": "4.0",
+        "Test Priority": "Critical",
+        "Platform": "Desktop/Web",
+        "Notes": "Business standard"
+      },
+      {
+        "id": "email-client-standards-4",
+        "Client Name": "Yahoo Mail",
+        "Market Share %": "2.5",
+        "Test Priority": "Major",
+        "Platform": "Web",
+        "Notes": "Legacy webmail"
+      },
+      {
+        "id": "email-client-standards-5",
+        "Client Name": "Samsung Mail",
+        "Market Share %": "1.9",
+        "Test Priority": "Minor",
+        "Platform": "Mobile",
+        "Notes": "Android default on Samsung"
+      },
+      {
+        "id": "email-client-standards-6",
+        "Client Name": "Outlook.com",
+        "Market Share %": "0.9",
+        "Test Priority": "Minor",
+        "Platform": "Web",
+        "Notes": "Web-based Outlook"
+      }
+    ]
+  }
+}

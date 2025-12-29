@@ -5,3 +5,4 @@
 -- This migration is the same as schema.sql
 -- It's included here for migration tracking
 
+

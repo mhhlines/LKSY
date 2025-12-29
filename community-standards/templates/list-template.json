@@ -1,0 +1,32 @@
+{
+  "id": "example-list",
+  "version": "1.0.0",
+  "name": "Example List",
+  "description": "A brief description of what this list contains.",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": ["tag1", "tag2"],
+  "first_published": "2025-01-01",
+  "last_updated": "2025-01-01",
+  "seo": {
+    "title": "Example List - lksy.org",
+    "description": "SEO description",
+    "keywords": ["keyword1", "keyword2"]
+  },
+  "checks": [
+    {
+      "id": "example-check",
+      "name": "Example Check",
+      "severity": "major",
+      "description": "Description of the check",
+      "rationale": "Why this check is important",
+      "automatable": true,
+      "detection_method": "pattern_matching",
+      "false_positive_rate": "low",
+      "status": "approved"
+    }
+  ]
+}
+
+
