@@ -8,16 +8,14 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
               alt="lksy.org logo"
               width={48}
               height={48}
               className="h-12 w-12 object-contain"
-              onError={(e) => {
-                console.error('Logo failed to load:', e);
-                e.currentTarget.style.display = 'none';
-              }}
+              loading="eager"
             />
             <span className="text-2xl font-bold text-primary-600">lksy.org</span>
           </Link>

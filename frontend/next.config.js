@@ -6,6 +6,9 @@ const nextConfig = {
     GITHUB_OWNER: process.env.GITHUB_OWNER || 'mhhlines',
     GITHUB_REPO: process.env.GITHUB_REPO || 'LKSY',
   },
+  images: {
+    unoptimized: true, // Disable image optimization to avoid issues with static images
+  },
   async rewrites() {
     return [
       {
