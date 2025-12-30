@@ -32,7 +32,6 @@
       "description": "Personalization token not replaced",
       "rationale": "Pattern: [COMPANY], {{company}}, %COMPANY_NAME%",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -43,7 +42,6 @@
       "description": "Company name too short",
       "rationale": "Pattern: len >= 2",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -54,7 +52,6 @@
       "description": "Reasonable company name length",
       "rationale": "Pattern: len <= 100",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -65,7 +62,6 @@
       "description": "Business name characters",
       "rationale": "Pattern: Letters, numbers, spaces, &, Inc, LLC, Ltd",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -76,7 +72,6 @@
       "description": "Common test values",
       "rationale": "Pattern: test, company, acme, default",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -87,7 +82,6 @@
       "description": "Common typos",
       "rationale": "Pattern: compnay, comapny, conpany",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     }

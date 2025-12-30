@@ -32,7 +32,6 @@
       "description": "Personalization token not replaced",
       "rationale": "Pattern: [FIRSTNAME], {{firstName}}, %FIRST_NAME%",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -43,7 +42,6 @@
       "description": "Cannot be empty",
       "rationale": "Pattern: len >= 1",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -54,7 +52,6 @@
       "description": "Reasonable name length",
       "rationale": "Pattern: len <= 50",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -65,7 +62,6 @@
       "description": "a-zA-Z\\s'-",
       "rationale": "Pattern: Letters, spaces, hyphens, apostrophes",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -76,7 +72,6 @@
       "description": "123456 is not a name",
       "rationale": "Pattern: Not only digits",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -87,7 +82,6 @@
       "description": "Common test values",
       "rationale": "Pattern: test, asdf, xxxx, default",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     }

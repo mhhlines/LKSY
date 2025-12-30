@@ -36,7 +36,6 @@
       "description": "Core Web Vital",
       "rationale": "Category: Performance",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -47,7 +46,6 @@
       "description": "Core Web Vital",
       "rationale": "Category: Performance",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -58,7 +56,6 @@
       "description": "Core Web Vital",
       "rationale": "Category: Performance",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -69,7 +66,6 @@
       "description": "Web readability standard",
       "rationale": "Category: Typography",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -80,7 +76,6 @@
       "description": "WCAG AA",
       "rationale": "Category: Color",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -91,7 +86,6 @@
       "description": "Required for SEO",
       "rationale": "Category: SEO",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -102,7 +96,6 @@
       "description": "One H1 per page",
       "rationale": "Category: SEO",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -113,7 +106,6 @@
       "description": "Required for accessibility",
       "rationale": "Category: SEO",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -124,7 +116,6 @@
       "description": "Use only keyboard",
       "rationale": "Category: Accessibility",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -135,7 +126,6 @@
       "description": "Keyboard accessibility",
       "rationale": "Category: Accessibility",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -146,7 +136,6 @@
       "description": "for/id matching",
       "rationale": "Category: Accessibility",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -157,7 +146,6 @@
       "description": "Valid SSL certificate",
       "rationale": "Category: Security",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -168,7 +156,6 @@
       "description": "Content-Security-Policy",
       "rationale": "Category: Security",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -179,7 +166,6 @@
       "description": "Mobile responsiveness",
       "rationale": "Category: Mobile",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -190,7 +176,6 @@
       "description": "Mobile usability",
       "rationale": "Category: Mobile",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -201,7 +186,6 @@
       "description": "W3C validation",
       "rationale": "Category: HTML/CSS",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -212,7 +196,6 @@
       "description": "header, nav, main, etc.",
       "rationale": "Category: HTML/CSS",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -223,7 +206,6 @@
       "description": "All links work",
       "rationale": "Category: Functional",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -234,7 +216,6 @@
       "description": "Console errors",
       "rationale": "Category: Functional",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     }

@@ -34,7 +34,6 @@
       "description": "Must display before setting non-essential cookies",
       "rationale": "Required by GDPR",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -45,7 +44,6 @@
       "description": "Must be easily accessible",
       "rationale": "Required by GDPR/CCPA",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -56,7 +54,6 @@
       "description": "Required in all marketing emails",
       "rationale": "Required by CAN-SPAM",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -67,7 +64,6 @@
       "description": "Must include valid physical address",
       "rationale": "Required by CAN-SPAM",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -78,7 +74,6 @@
       "description": "Must specify how long data is kept",
       "rationale": "Required by GDPR",
       "automatable": false,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -89,7 +84,6 @@
       "description": "Users can request data deletion",
       "rationale": "Required by GDPR/CCPA",
       "automatable": false,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -100,7 +94,6 @@
       "description": "Must disclose data sharing practices",
       "rationale": "Required by GDPR/CCPA",
       "automatable": false,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -111,7 +104,6 @@
       "description": "Required if collecting data from children <13",
       "rationale": "Required by COPPA",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "low",
       "status": "approved"
     }

@@ -34,7 +34,6 @@
       "description": "Sender Policy Framework configured",
       "rationale": "Based on SPF (RFC 7208)",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -45,7 +44,6 @@
       "description": "DomainKeys Identified Mail configured",
       "rationale": "Based on DKIM (RFC 6376)",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -56,7 +54,6 @@
       "description": "Domain-based Message Auth configured",
       "rationale": "Based on DMARC (RFC 7489)",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -67,7 +64,6 @@
       "description": "One-click unsubscribe support",
       "rationale": "Based on RFC 2369",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -78,7 +74,6 @@
       "description": "From address matches sending domain",
       "rationale": "Based on RFC 5322",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -89,7 +84,6 @@
       "description": "Avoid image-only emails",
       "rationale": "Based on Best Practice",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -100,7 +94,6 @@
       "description": "Limit spam trigger words",
       "rationale": "Based on Best Practice",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -111,7 +104,6 @@
       "description": "Unique message identifier",
       "rationale": "Based on RFC 5322",
       "automatable": true,
-      "detection_method": "protocol_check",
       "false_positive_rate": "very_low",
       "status": "approved"
     }

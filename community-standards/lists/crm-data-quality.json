@@ -6,13 +6,22 @@
   "type": "checks",
   "status": "active",
   "maintainers": [],
-  "tags": ["sales", "crm", "data-quality"],
+  "tags": [
+    "sales",
+    "crm",
+    "data-quality"
+  ],
   "first_published": "2025-01-21",
   "last_updated": "2025-01-21",
   "seo": {
     "title": "CRM Data Quality Standards v1.0.0 | lksy.org",
     "description": "20 data quality checks for CRM records to ensure data accuracy and completeness.",
-    "keywords": ["crm data quality", "salesforce", "crm standards", "data quality"]
+    "keywords": [
+      "crm data quality",
+      "salesforce",
+      "crm standards",
+      "data quality"
+    ]
   },
   "checks": [
     {
@@ -22,7 +31,6 @@
       "description": "Verify email address is in valid format",
       "rationale": "Invalid emails cannot be used for outreach",
       "automatable": true,
-      "detection_method": "regex",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -33,7 +41,6 @@
       "description": "Verify email domain exists and has MX records",
       "rationale": "Invalid domains indicate bad data",
       "automatable": true,
-      "detection_method": "dns_lookup",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -44,7 +51,6 @@
       "description": "Verify phone number is in valid format",
       "rationale": "Invalid phone numbers cannot be used",
       "automatable": true,
-      "detection_method": "regex",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -55,7 +61,6 @@
       "description": "Verify first name and last name are present",
       "rationale": "Incomplete names reduce personalization",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -66,7 +71,6 @@
       "description": "Verify company name is present for account records",
       "rationale": "Company name is essential for B2B records",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -77,7 +81,6 @@
       "description": "Verify address fields are complete if address is provided",
       "rationale": "Incomplete addresses are less useful",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -88,7 +91,6 @@
       "description": "Verify no duplicate records exist (same email or phone)",
       "rationale": "Duplicates cause data quality issues",
       "automatable": true,
-      "detection_method": "duplicate_detection",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -99,7 +101,6 @@
       "description": "Verify job title is present for contact records",
       "rationale": "Job title helps with lead qualification",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -110,7 +111,6 @@
       "description": "Verify industry is classified for account records",
       "rationale": "Industry helps with segmentation",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -121,7 +121,6 @@
       "description": "Verify company size is set for account records",
       "rationale": "Company size helps with lead qualification",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -132,7 +131,6 @@
       "description": "Verify lead source is tracked",
       "rationale": "Lead source is essential for attribution",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -143,7 +141,6 @@
       "description": "Verify no test data (test@, example.com, etc.)",
       "rationale": "Test data pollutes production data",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -154,7 +151,6 @@
       "description": "Verify no placeholder text (N/A, TBD, etc.)",
       "rationale": "Placeholder text indicates incomplete data",
       "automatable": true,
-      "detection_method": "pattern_matching",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -165,7 +161,6 @@
       "description": "Verify website URL is valid and accessible",
       "rationale": "Invalid URLs indicate bad data",
       "automatable": true,
-      "detection_method": "url_validation",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -176,7 +171,6 @@
       "description": "Verify LinkedIn URL is valid format if provided",
       "rationale": "Invalid LinkedIn URLs indicate bad data",
       "automatable": true,
-      "detection_method": "url_validation",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -187,7 +181,6 @@
       "description": "Verify last activity date is tracked",
       "rationale": "Activity dates help with lead scoring",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -198,7 +191,6 @@
       "description": "Verify record owner is assigned",
       "rationale": "Unassigned records cannot be worked",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -209,7 +201,6 @@
       "description": "Verify stage progression follows logical order",
       "rationale": "Invalid stage progression indicates data issues",
       "automatable": true,
-      "detection_method": "workflow_validation",
       "false_positive_rate": "low",
       "status": "approved"
     },
@@ -220,7 +211,6 @@
       "description": "Verify deal amount is positive number if stage is closed-won",
       "rationale": "Closed-won deals should have amounts",
       "automatable": true,
-      "detection_method": "field_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     },
@@ -231,11 +221,8 @@
       "description": "Verify close date is in future for open deals, past for closed deals",
       "rationale": "Close dates should match deal stage",
       "automatable": true,
-      "detection_method": "date_validation",
       "false_positive_rate": "very_low",
       "status": "approved"
     }
   ]
 }
-
-

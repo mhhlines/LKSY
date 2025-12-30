@@ -34,7 +34,6 @@
       "description": "Arial, Helvetica, Georgia as fallbacks",
       "rationale": "Category: Typography",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -45,7 +44,6 @@
       "description": "Readability standard",
       "rationale": "Category: Typography",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -56,7 +54,6 @@
       "description": "WCAG AA compliance",
       "rationale": "Category: Color",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -67,7 +64,6 @@
       "description": "Common rendering error",
       "rationale": "Category: Color",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -78,7 +74,6 @@
       "description": "No 404 errors",
       "rationale": "Category: Content",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -89,7 +84,6 @@
       "description": "WCAG requirement",
       "rationale": "Category: Content",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -100,7 +94,6 @@
       "description": "[FIRSTNAME] not replaced",
       "rationale": "Category: Content",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -111,7 +104,6 @@
       "description": "No placeholder text",
       "rationale": "Category: Content",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -122,7 +114,6 @@
       "description": "30%+ market share",
       "rationale": "Category: Rendering",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -133,7 +124,6 @@
       "description": "Business standard",
       "rationale": "Category: Rendering",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -144,7 +134,6 @@
       "description": "Single column mobile",
       "rationale": "Category: Rendering",
       "automatable": false,
-      "detection_method": "manual_review",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -155,7 +144,6 @@
       "description": "Email authentication",
       "rationale": "Category: Deliverability",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -166,7 +154,6 @@
       "description": "Email authentication",
       "rationale": "Category: Deliverability",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -177,7 +164,6 @@
       "description": "CAN-SPAM required",
       "rationale": "Category: Compliance",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -188,7 +174,6 @@
       "description": "CAN-SPAM required",
       "rationale": "Category: Compliance",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -199,7 +184,6 @@
       "description": "W3C validation",
       "rationale": "Category: Technical",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -210,7 +194,6 @@
       "description": "Not supported in email",
       "rationale": "Category: Technical",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     },
@@ -221,7 +204,6 @@
       "description": "Gmail clipping threshold",
       "rationale": "Category: Technical",
       "automatable": true,
-      "detection_method": "code_analysis",
       "false_positive_rate": "medium",
       "status": "approved"
     }
