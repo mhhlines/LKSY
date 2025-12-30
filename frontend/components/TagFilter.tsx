@@ -1,27 +1,31 @@
 'use client';
 
 import { List } from '@/shared/types';
-import { useState } from 'react';
 
 type TagFilterProps = {
   lists: List[];
+  selectedTags: string[];
+  onTagsChange: (tags: string[]) => void;
 };
 
-export function TagFilter({ lists }: TagFilterProps) {
+export function TagFilter({ lists, selectedTags, onTagsChange }: TagFilterProps) {
   const allTags = Array.from(new Set(lists.flatMap((list) => list.tags))).sort();
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  const handleTagClick = (tag: string) => {
+    if (selectedTags.includes(tag)) {
+      onTagsChange(selectedTags.filter((t) => t !== tag));
+    } else {
+      onTagsChange([...selectedTags, tag]);
+    }
+  };
 
   return (
     <div className="flex flex-wrap gap-2">
-      {allTags.slice(0, 10).map((tag) => (
+      {allTags.map((tag) => (
         <button
           key={tag}
-          onClick={() => {
-            setSelectedTags((prev) =>
-              prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-            );
-          }}
-          className={`px-3 py-1 rounded-full text-sm ${
+          onClick={() => handleTagClick(tag)}
+          className={`px-3 py-1 rounded-full text-sm transition-colors ${
             selectedTags.includes(tag)
               ? 'bg-primary-600 text-white'
               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -33,5 +37,6 @@ export function TagFilter({ lists }: TagFilterProps) {
     </div>
   );
 }
+
 
 

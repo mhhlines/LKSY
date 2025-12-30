@@ -1,7 +1,4 @@
-import { ListsGrid } from '@/components/ListsGrid';
-import { SearchBar } from '@/components/SearchBar';
-import { TagFilter } from '@/components/TagFilter';
-import { SortSelector } from '@/components/SortSelector';
+import { ListFilters } from '@/components/ListFilters';
 import { getLists } from '@/lib/github';
 
 export default async function HomePage() {
@@ -19,17 +16,10 @@ export default async function HomePage() {
         </p>
       </div>
 
-      <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
-        <SearchBar />
-        <div className="flex gap-4 items-center">
-          <TagFilter lists={lists} />
-          <SortSelector />
-        </div>
-      </div>
-
-      <ListsGrid lists={lists} />
+      <ListFilters lists={lists} />
     </div>
   );
 }
+
 
 

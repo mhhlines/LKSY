@@ -1,16 +1,17 @@
 'use client';
 
-import { useState } from 'react';
-
 type SortOption = 'popular' | 'recent' | 'alphabetical';
 
-export function SortSelector() {
-  const [sort, setSort] = useState<SortOption>('popular');
+type SortSelectorProps = {
+  value: SortOption;
+  onChange: (value: SortOption) => void;
+};
 
+export function SortSelector({ value, onChange }: SortSelectorProps) {
   return (
     <select
-      value={sort}
-      onChange={(e) => setSort(e.target.value as SortOption)}
+      value={value}
+      onChange={(e) => onChange(e.target.value as SortOption)}
       className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
     >
       <option value="popular">Most Popular</option>
@@ -19,5 +20,6 @@ export function SortSelector() {
     </select>
   );
 }
+
 
 
