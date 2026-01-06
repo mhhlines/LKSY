@@ -1,0 +1,174 @@
+{
+  "id": "functional-testing-standards",
+  "version": "1.0.0",
+  "name": "Functional Testing Standards",
+  "description": "Interactive features and user flows work correctly",
+  "type": "checks",
+  "status": "active",
+  "maintainers": [],
+  "tags": [
+    "functional",
+    "testing",
+    "qa",
+    "user-experience",
+    "interactive"
+  ],
+  "first_published": "2025-01-01",
+  "last_updated": "2025-01-01",
+  "seo": {
+    "title": "Functional Testing Standards v1.0.0 | lksy.org",
+    "description": "Interactive features and user flows work correctly. Free, open source, version-controlled community standards.",
+    "keywords": [
+      "functional",
+      "testing",
+      "qa",
+      "user-experience",
+      "interactive",
+      "community standards",
+      "qa standards"
+    ]
+  },
+  "checks": [
+    {
+      "id": "all-forms-submit-correctly",
+      "name": "All Forms Submit Correctly",
+      "severity": "critical",
+      "description": "Do all forms submit successfully to their endpoints?",
+      "rationale": "Expected value: true. Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "form-validation-clear-and-helpful",
+      "name": "Form Validation Clear and Helpful",
+      "severity": "major",
+      "description": "Are form validation errors clear and helpful?",
+      "rationale": "Expected value: true. Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "required-fields-marked",
+      "name": "Required Fields Marked",
+      "severity": "major",
+      "description": "Are required form fields clearly marked?",
+      "rationale": "Expected value: true. Validation method: code_analysis + computer_vision. Based on Functional QA best practices.",
+      "automatable": true,
+      "false_positive_rate": "medium",
+      "status": "approved"
+    },
+    {
+      "id": "all-links-functional",
+      "name": "All Links Functional",
+      "severity": "critical",
+      "description": "Do all links return successful HTTP status codes? Expected: true (no 404s, 500s). Check link types: Internal links, External links, Anchor links (#section), Email links (mailto:), Phone links (tel:).",
+      "rationale": "Validation method: code_analysis. Based on Functional QA best practices.",
+      "automatable": true,
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "all-images-load-successfully",
+      "name": "All Images Load Successfully",
+      "severity": "major",
+      "description": "Do all images load without errors?",
+      "rationale": "Expected value: true. Validation method: code_analysis + computer_vision. Based on Functional QA best practices.",
+      "automatable": true,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "interactive-elements-respond",
+      "name": "Interactive Elements Respond",
+      "severity": "critical",
+      "description": "Do interactive elements respond to user actions? Test elements: Buttons, Dropdowns, Modals/dialogs, Accordions, Tabs, Carousels/sliders, Tooltips, Popovers, Toggle switches, Date pickers, Autocomplete fields.",
+      "rationale": "Expected value: true. Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "search-functional",
+      "name": "Search Functional",
+      "severity": "major",
+      "description": "Does site search work correctly (if present)?",
+      "rationale": "Expected value: true (if applicable). Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "filters-sorting-work",
+      "name": "Filters/Sorting Work",
+      "severity": "major",
+      "description": "Do filters and sorting functions work correctly?",
+      "rationale": "Expected value: true (if applicable). Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "no-javascript-errors",
+      "name": "No JavaScript Errors",
+      "severity": "critical",
+      "description": "Are there JavaScript errors in the browser console?",
+      "rationale": "Expected value: false (no errors). Validation method: code_analysis. Based on Functional QA best practices.",
+      "automatable": true,
+      "false_positive_rate": "very_low",
+      "status": "approved"
+    },
+    {
+      "id": "cookie-consent-functional",
+      "name": "Cookie Consent Functional",
+      "severity": "major",
+      "description": "Does cookie consent banner function correctly (if applicable)?",
+      "rationale": "Expected value: true (if applicable). Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "no-spelling-errors",
+      "name": "No Spelling Errors",
+      "severity": "minor",
+      "description": "Are there spelling errors on the page?",
+      "rationale": "Expected value: false (no spelling errors). Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "no-grammar-errors",
+      "name": "No Grammar Errors",
+      "severity": "minor",
+      "description": "Are there grammar errors on the page?",
+      "rationale": "Expected value: false (no grammar errors). Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "no-lorem-ipsum-placeholder-text",
+      "name": "No Lorem Ipsum Placeholder Text",
+      "severity": "major",
+      "description": "Is there \"Lorem ipsum\" or other placeholder text on the page? Check for patterns: \"Lorem ipsum\", \"dolor sit amet\", \"consectetur adipiscing\", \"[Placeholder]\", \"[Content goes here]\", \"Lorem\", \"Ipsum\".",
+      "rationale": "Expected value: false (no Lorem ipsum). Validation method: code_analysis + computer_vision. Based on Functional QA best practices.",
+      "automatable": true,
+      "false_positive_rate": "low",
+      "status": "approved"
+    },
+    {
+      "id": "content-up-to-date-and-relevant",
+      "name": "Content Up-to-Date and Relevant",
+      "severity": "major",
+      "description": "Is content current and relevant?",
+      "rationale": "Expected value: true. Validation method: manual_review. Based on Functional QA best practices.",
+      "automatable": false,
+      "false_positive_rate": "medium",
+      "status": "approved"
+    }
+  ]
+}
+

@@ -198,26 +198,6 @@
       "automatable": true,
       "false_positive_rate": "medium",
       "status": "approved"
-    },
-    {
-      "id": "no-404-links",
-      "name": "No 404 links",
-      "severity": "critical",
-      "description": "All links work",
-      "rationale": "Category: Functional",
-      "automatable": true,
-      "false_positive_rate": "medium",
-      "status": "approved"
-    },
-    {
-      "id": "no-js-errors",
-      "name": "No JS errors",
-      "severity": "major",
-      "description": "Console errors",
-      "rationale": "Category: Functional",
-      "automatable": true,
-      "false_positive_rate": "medium",
-      "status": "approved"
     }
   ]
 }

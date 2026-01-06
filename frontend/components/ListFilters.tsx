@@ -29,15 +29,21 @@ export function ListFilters({ lists }: ListFiltersProps) {
         (list) =>
           list.name.toLowerCase().includes(query) ||
           list.description.toLowerCase().includes(query) ||
-          list.id.toLowerCase().includes(query)
+          list.id.toLowerCase().includes(query) ||
+          list.tags.some((tag) => tag.toLowerCase().includes(query))
       );
     }
 
-    // Filter by selected tags
+    // Filter by selected tags (case-insensitive)
     if (selectedTags.length > 0) {
-      filtered = filtered.filter((list) =>
-        selectedTags.every((tag) => list.tags.includes(tag))
-      );
+      filtered = filtered.filter((list) => {
+        if (!list.tags || list.tags.length === 0) return false;
+        return selectedTags.every((selectedTag) =>
+          list.tags.some((listTag) => 
+            listTag.toLowerCase() === selectedTag.toLowerCase()
+          )
+        );
+      });
     }
 
     // Sort lists
